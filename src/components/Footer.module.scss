@@ -1,0 +1,48 @@
+@import 'variables.scss';
+.footer {
+  background-color: $main;
+  color: $white;
+  border-top: 1px solid $primary;
+  &.light {
+    background-color: $light;
+    color: $main;
+    .footer__contact {
+      svg {
+        fill: $purple;
+        &:hover {
+          fill: $blue;
+        }
+      }
+    }
+  }
+  &__container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 20px 15px;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__logo {
+    font-size: 30px;
+    font-weight: 1000;
+    padding-right: 50px;
+  }
+
+  &__copy {
+    text-align: center;
+  }
+
+  &__contact {
+    svg {
+      fill: $white;
+      transition: fill 0.2s;
+      &:hover {
+        fill: $blue;
+      }
+    }
+  }
+}

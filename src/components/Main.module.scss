@@ -1,0 +1,163 @@
+@import 'variables.scss';
+
+.main {
+  background-color: $main;
+  color: $white;
+  min-height: calc(100vh - 70px);
+  &.light {
+    background-color: $light;
+    color: $main;
+  }
+  &__container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 150px 15px;
+
+    display: flex;
+    @media (max-width: $md2) {
+      display: block;
+      padding: 50px 15px;
+    }
+  }
+
+  &__left {
+    flex: 0 1 50%;
+    @media (max-width: $md2) {
+      text-align: center;
+    }
+  }
+  &__right {
+    flex: 0 1 50%;
+    position: relative;
+    @media (max-width: $md2) {
+      height: 370px;
+      margin-top: 150px;
+    }
+  }
+
+  &__title {
+    font-size: 53px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    &_purple {
+      color: $purple;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+    @media (max-width: $md1) {
+      font-size: 43px;
+    }
+    @media (max-width: $md4) {
+      font-size: 33px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    span {
+      font-weight: 600;
+      font-size: 20px;
+      color: purple;
+    }
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    font-size: 20px;
+    border-radius: 30px;
+    border: 3px solid $blue;
+    padding: 15px 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $white;
+      border: 3px solid $white;
+      color: $blue;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(0, -50%);
+    animation-name: animemain;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    z-index: 2;
+    @media (max-width: $md2) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @media (max-width: $md4) {
+      width: 265px;
+      height: 441px;
+      img {
+        width: 265px;
+        height: 441px;
+      }
+    }
+  }
+  &__decor {
+    position: absolute;
+    top: -25%;
+    left: 19%;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+    border-radius: 50%;
+    animation-name: left;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    &:nth-child(2) {
+      top: 0%;
+      left: 87%;
+      width: 35px;
+      height: 35px;
+    }
+    &:nth-child(3) {
+      top: 88%;
+      left: -12%;
+      @media (max-width: $md2) {
+        left: 26%;
+      }
+    }
+    &:nth-child(4) {
+      top: -25%;
+      left: -91%;
+      width: 45px;
+      height: 45px;
+      @media (max-width: $md2) {
+        left: 65%;
+      }
+    }
+  }
+}
+@keyframes animemain {
+  0% {
+    top: 50%;
+  }
+
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+@keyframes left {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

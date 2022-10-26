@@ -1,0 +1,78 @@
+@import 'variables.scss';
+
+.converter {
+  background-color: $main;
+  min-height: calc(100vh - 70px);
+  color: $white;
+  &.light {
+    background-color: $light;
+    color: $main;
+  }
+  &__container {
+    padding: 50px 15px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 51px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    padding: 30px 40px;
+    border-radius: 20px;
+    width: 600px;
+    margin: 0 auto;
+    gap: 100px;
+    @media (max-width: $md2) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    flex: 0 1 50%;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__currency {
+    border: 2px solid $white;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: $white;
+  }
+  &__currency_active {
+    border: 2px solid $purple;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: $white;
+  }
+
+  &__input {
+    background-color: $white;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 24px;
+    width: 100%;
+    color: #000;
+  }
+}

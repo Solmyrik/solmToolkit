@@ -1,0 +1,70 @@
+@import 'variables.scss';
+.wish {
+  background-color: $main;
+  min-height: calc(100vh - 70px);
+  color: $white;
+  &.light {
+    background-color: $light;
+    color: $main;
+  }
+  &__container {
+    padding: 50px 15px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 51px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    @media (max-width: $md2) {
+      font-size: 40px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__body {
+  }
+
+  &__string {
+    margin: 75px 0px;
+    text-align: center;
+    font-size: 26px;
+    padding: 10px;
+    background-color: $primary;
+    border-radius: 10px;
+    min-height: 50px;
+    color: $white;
+  }
+
+  &__btns {
+    justify-content: center;
+    gap: 30px;
+    display: flex;
+    @media (max-width: $md2) {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    font-size: 20px;
+    border-radius: 30px;
+    border: 3px solid $blue;
+    padding: 15px 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $white;
+      border: 3px solid $white;
+      color: $blue;
+    }
+    &_p {
+      border: 3px solid $purple;
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+}
