@@ -12,6 +12,10 @@
 SPA (single page application). A set of various generators. Password generator, compliment generator, currency converter, random number generator, QR code generator. The ability to switch between light and dark page theme
 
 
+
+![Video-Gif720p](https://raw.githubusercontent.com/Solmyrik/solmToolkit/master/gitimage/solmToolkit%20-%20Google%20Chrome%202022-10-29%2018-06-59.gif)
+
+
 ## Project technologies
 
 <p>
